@@ -1,0 +1,43 @@
+body {
+  align-items: center;
+  text-align: center;
+}
+.gallery {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+.gallery img {
+  width: 100%;
+  /* height: auto; */
+  height: 180px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 1px 1px 5px 1px;
+  background-size: cover;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.displayImg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.displayImg img {
+  max-width: 40%;
+  max-height: 70%;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
